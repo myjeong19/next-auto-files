@@ -1,0 +1,17 @@
+{
+  "name": "next-auto-file",
+  "version": "1.0.0",
+  "description": "Next.js auto file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nextjs",
+    "auto",
+    "file",
+    "auto-file"
+  ],
+  "author": "myjeong19",
+  "license": "MIT"
+}
