@@ -3,7 +3,7 @@
 import * as chokidar from 'chokidar';
 import * as fs from 'fs';
 import * as path from 'path';
-import { loadConfig, createDefaultConfigIfNotExists } from './config';
+import { loadConfig, createDefaultConfigIfNotExists, getAbsolutePath } from './config';
 import { defaultTemplates, processTemplate, toPascalCase } from './templates';
 
 // Initialize configuration
@@ -241,23 +241,27 @@ function createFile(
  * Normalize a path for use in templates
  */
 function normalizePathForTemplate(directoryPath: string): string {
-  return directoryPath.replace(config.watchDir, '').replace(/\\/g, '/');
+  const absoluteWatchDir = getAbsolutePath(config.watchDir);
+  return directoryPath.replace(absoluteWatchDir, '').replace(/\\/g, '/');
 }
 
 /**
  * Initialize the directory watcher
  */
 function initWatcher(): void {
+  // Get absolute path for watch directory
+  const absoluteWatchDir = getAbsolutePath(config.watchDir);
+
   // Check if watch directory exists instead of creating it
-  if (!fileExistsSafe(config.watchDir)) {
-    console.error(`Watch directory does not exist: ${config.watchDir}`);
+  if (!fileExistsSafe(absoluteWatchDir)) {
+    console.error(`Watch directory does not exist: ${absoluteWatchDir}`);
     console.log(`Please create the directory manually before running the app.`);
     process.exit(1);
   }
 
-  const watcher = createWatcher();
+  const watcher = createWatcher(absoluteWatchDir);
 
-  console.log(`Started watching directory: ${config.watchDir}`);
+  console.log(`Started watching directory: ${absoluteWatchDir}`);
 
   setupWatcherEvents(watcher);
   setupProcessEvents(watcher);
@@ -274,8 +278,8 @@ function ensureWatchDirectory(): void {
 /**
  * Create a file system watcher
  */
-function createWatcher(): chokidar.FSWatcher {
-  return chokidar.watch(config.watchDir, {
+function createWatcher(watchPath: string): chokidar.FSWatcher {
+  return chokidar.watch(watchPath, {
     persistent: true,
     ignoreInitial: false,
     ignored: config.ignorePatterns,
