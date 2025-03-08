@@ -1,8 +1,8 @@
 {
-  "name": "next-auto-file",
+  "name": "@next-file-gen/core",
   "version": "1.0.0",
   "description": "Next.js auto file generator",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
@@ -14,8 +14,8 @@
     "auto",
     "file",
     "auto-file",
-    "next-auto-file",
-    "next-auto-file-generator"
+    "next-file-gen",
+    "next-file-gen-generator"
   ],
   "author": "myjeong19",
   "license": "MIT",
@@ -27,6 +27,6 @@
     "typescript": "^5.8.2"
   },
   "bin": {
-    "next-auto-file": "./dist/index.js"
+    "next-file-gen": "./dist/index.js"
   }
 }

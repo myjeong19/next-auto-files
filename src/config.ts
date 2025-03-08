@@ -18,7 +18,7 @@ const defaultConfig: Config = {
 };
 
 /** Path to the configuration file */
-const CONFIG_FILE_PATH = path.join(process.cwd(), 'next-auto-file.config.json');
+const CONFIG_FILE_PATH = path.join(process.cwd(), 'next-file-gen.config.json');
 
 /**
  * Gets absolute path from a relative path

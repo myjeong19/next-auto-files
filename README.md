@@ -1,4 +1,4 @@
-# next-auto-file
+# next-file-gen
 
 A utility for automatically generating files that follow the Next.js App Router structure based on folder name patterns.
 
@@ -6,10 +6,10 @@ A utility for automatically generating files that follow the Next.js App Router 
 
 ```bash
 # Using npm
-npm install --save-dev next-auto-file
+npm install --save-dev next-file-gen
 
 # Using yarn
-yarn add --dev next-auto-file
+yarn add --dev next-file-gen
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ yarn add --dev next-auto-file
 From your project root directory, run:
 
 ```bash
-npx next-auto-file
+npx next-file-gen
 ```
 
 You can also add it as a script in your package.json:
@@ -27,7 +27,7 @@ You can also add it as a script in your package.json:
 ```json
 {
   "scripts": {
-    "dev:watch": "next-auto-file"
+    "dev:watch": "next-file-gen"
   }
 }
 ```
@@ -77,7 +77,7 @@ Note: You can also use `:` instead of `.` as a separator (e.g., `blog:page`).
 
 ## Configuration
 
-A `next-auto-file.config.json` file is automatically created in your project root. You can modify this file to change the following settings:
+A `next-file-gen.config.json` file is automatically created in your project root. You can modify this file to change the following settings:
 
 ```json
 {
