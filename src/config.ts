@@ -13,7 +13,7 @@ export interface Config {
 
 /** Default configuration values */
 const defaultConfig: Config = {
-  watchDir: path.join(process.cwd(), 'src', 'app'),
+  watchDir: path.join(process.cwd(), 'app'),
   ignorePatterns: ['**/node_modules/**', '**/.git/**', '**/dist/**', '**/build/**'],
 };
 
