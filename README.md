@@ -81,7 +81,7 @@ A `next-file-gen.config.json` file is automatically created in your project root
 
 ```json
 {
-  "watchDir": "src/app",
+  "watchDir": "/app",
   "ignorePatterns": ["**/node_modules/**", "**/.git/**", "**/dist/**", "**/build/**"]
 }
 ```
@@ -92,7 +92,7 @@ A `next-file-gen.config.json` file is automatically created in your project root
 ## Notes
 
 - Folders without specific patterns will be kept as is without any files being generated
-- The tool watches the `src/app` directory by default. Edit the config file to watch a different directory
+- The tool watches the `app` directory by default. Edit the config file to watch a different directory
 - Existing files will not be overwritten
 - Files are generated with clean, minimal boilerplate code
 
