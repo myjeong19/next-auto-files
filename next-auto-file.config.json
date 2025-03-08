@@ -1,0 +1,9 @@
+{
+  "watchDir": "/Users/jeongmin-yeong/current/next-auto-file/src/app",
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "**/dist/**",
+    "**/build/**"
+  ]
+}

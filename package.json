@@ -1,22 +1,29 @@
 {
   "name": "next-auto-file",
   "version": "1.0.0",
-  "description": "Next.js auto file",
+  "description": "Next.js auto file generator",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "nextjs",
     "auto",
     "file",
-    "auto-file"
+    "auto-file",
+    "next-auto-file",
+    "next-auto-file-generator"
   ],
   "author": "myjeong19",
   "license": "MIT",
   "devDependencies": {
     "@types/chokidar": "^2.1.7",
     "@types/node": "^22.13.9",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.2"
   }
 }
