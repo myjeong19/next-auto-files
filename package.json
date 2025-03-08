@@ -1,6 +1,6 @@
 {
   "name": "@next-file-gen/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Next.js auto file generator",
   "main": "dist/index.js",
   "scripts": {
