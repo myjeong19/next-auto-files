@@ -13,5 +13,10 @@
     "auto-file"
   ],
   "author": "myjeong19",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chokidar": "^2.1.7",
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  }
 }
