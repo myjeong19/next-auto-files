@@ -6,10 +6,10 @@ A utility for automatically generating files that follow the Next.js App Router 
 
 ```bash
 # Using npm
-npm install --save-dev next-file-gen
+npm install --save-dev @next-file-gen/core
 
 # Using yarn
-yarn add --dev next-file-gen
+yarn add --dev @next-file-gen/core
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ yarn add --dev next-file-gen
 From your project root directory, run:
 
 ```bash
-npx next-file-gen
+npx @next-file-gen/core
 ```
 
 You can also add it as a script in your package.json:
