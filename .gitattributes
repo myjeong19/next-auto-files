@@ -1,0 +1,3 @@
+dist/* linguist-generated=true
+
+*.ts linguist-language=TypeScript
