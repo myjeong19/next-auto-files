@@ -1,6 +1,6 @@
 # next-file-gen
 
-A utility for automatically generating files that follow the Next.js App Router structure based on folder name patterns.
+Simple and lightweight, Next.js App Router sub-file auto-generator.
 
 ## Installation
 
