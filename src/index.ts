@@ -294,13 +294,13 @@ function createWatcher(watchPath: string): chokidar.FSWatcher {
  * Set up watcher event handlers
  */
 function setupWatcherEvents(watcher: chokidar.FSWatcher): void {
-  watcher.on('addDir', directoryPath => {
+  watcher.on('addDir', (directoryPath: string) => {
     if (directoryPath !== config.watchDir) {
       createFilesForDirectory(directoryPath);
     }
   });
 
-  watcher.on('error', error => {
+  watcher.on('error', (error: unknown) => {
     console.error('Error occurred during watching:', error);
   });
 }
