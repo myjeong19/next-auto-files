@@ -1,15 +1,18 @@
-# next-file-gen
+# next-auto-files
 
-Simple and lightweight, Next.js App Router sub-file auto-generator.
+Automatic file generator for Next.js App Router applications. Watch directories and generate template files based on naming patterns.
 
 ## Installation
 
 ```bash
 # Using npm
-npm install --save-dev @next-file-gen/core
+npm install --save-dev next-auto-files
 
 # Using yarn
-yarn add --dev @next-file-gen/core
+yarn add --dev next-auto-files
+
+# Global installation
+npm install -g next-auto-files
 ```
 
 ## Usage
@@ -19,7 +22,11 @@ yarn add --dev @next-file-gen/core
 From your project root directory, run:
 
 ```bash
-npx @next-file-gen/core
+# If installed globally
+next-auto-files
+
+# If installed locally
+npx next-auto-files
 ```
 
 You can also add it as a script in your package.json:
@@ -27,7 +34,7 @@ You can also add it as a script in your package.json:
 ```json
 {
   "scripts": {
-    "dev:watch": "next-file-gen"
+    "dev:watch": "next-auto-files"
   }
 }
 ```
@@ -77,17 +84,26 @@ Note: You can also use `:` instead of `.` as a separator (e.g., `blog:page`).
 
 ## Configuration
 
-A `next-file-gen.config.json` file is automatically created in your project root. You can modify this file to change the following settings:
+A `next-auto-files.config.json` file is automatically created in your project root. You can modify this file to change the following settings:
 
 ```json
 {
-  "watchDir": "/app",
+  "watchDir": "app",
   "ignorePatterns": ["**/node_modules/**", "**/.git/**", "**/dist/**", "**/build/**"]
 }
 ```
 
-- **watchDir**: The directory to watch for changes
-- **ignorePatterns**: Patterns to exclude from watching
+- **watchDir**: The directory to watch for changes (default: `app`)
+- **ignorePatterns**: Glob patterns to exclude from watching
+
+## Features
+
+- 🚀 **Automatic file generation** based on folder naming patterns
+- 📁 **Smart directory watching** with configurable patterns
+- 🔄 **Real-time monitoring** of file system changes
+- 🛡️ **Safe operation** - never overwrites existing files
+- ⚡ **Minimal setup** - works out of the box
+- 🎯 **TypeScript support** with clean templates
 
 ## Notes
 
@@ -95,6 +111,7 @@ A `next-file-gen.config.json` file is automatically created in your project root
 - The tool watches the `app` directory by default. Edit the config file to watch a different directory
 - Existing files will not be overwritten
 - Files are generated with clean, minimal boilerplate code
+- Directory names are automatically converted to PascalCase for component names
 
 ## Technical Stack
 
