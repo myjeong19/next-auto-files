@@ -1,7 +1,7 @@
 {
-  "name": "@next-file-gen/core",
+  "name": "next-auto-files",
   "version": "1.0.3",
-  "description": "Next.js auto file generator",
+  "description": "Automatic file generator for Next.js applications",
   "main": "dist/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
@@ -11,22 +11,36 @@
   },
   "keywords": [
     "nextjs",
+    "next.js",
     "auto",
     "file",
-    "auto-file",
-    "next-file-gen",
-    "next-file-gen-generator"
+    "generator",
+    "template",
+    "scaffold",
+    "cli",
+    "automation",
+    "development"
   ],
   "author": "myjeong19",
   "license": "MIT",
   "devDependencies": {
-    "@types/chokidar": "^2.1.7",
     "@types/node": "^22.13.9",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.2"
   },
   "bin": {
-    "next-file-gen": "./dist/index.js"
+    "next-auto-files": "./dist/index.js"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myjeong19/next-auto-files"
+  },
+  "homepage": "https://github.com/myjeong19/next-auto-files#readme",
+  "bugs": {
+    "url": "https://github.com/myjeong19/next-auto-files/issues"
   }
 }
